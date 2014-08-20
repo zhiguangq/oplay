@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="gb2312" ?>
+<archive>
+	<video>
+		<type>电视剧</type>
+		<name>大太监</name>
+		<pictureUrl></pictureUrl>
+		<url>http://localhost/Happy.Feet.Two.2011.mkv</url>
+		<url>http://localhost/bikes.flv</url>
+		<url>http://localhost/cathy2.flv</url>
+		<url>http://localhost/sample.flv</url>
+		<url>http://localhost/Wildlife.wmv</url>
+		<url>http://localhost/YongQi1_AVC_Main_720_480_2Mbps.ts</url>
+		<url>http://localhost/摄影师与模特.ts</url>
+		<url>http://localhost/电影/爱情/[90分钟.2012]/90分钟.flv</url>
+	</video>
+	<video>
+		<type>电影</type>
+		<name>快乐的大脚</name>
+		<pictureUrl></pictureUrl>
+		<url>http://localhost/Happy.Feet.Two.2011.mkv</url>	
+	</video>
+</archive>

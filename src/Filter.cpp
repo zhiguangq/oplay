@@ -1,0 +1,171 @@
+/******************************************************************************
+    QtAV:  Media play library based on Qt and FFmpeg
+    Copyright (C) 2012-2014 Wang Bin <wbsecg1@gmail.com>
+
+*   This file is part of QtAV
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+******************************************************************************/
+
+#include "QtAV/Filter.h"
+#include "QtAV/private/Filter_p.h"
+#include "QtAV/Statistics.h"
+#include "QtAV/AVOutput.h"
+#include "QtAV/AVPlayer.h"
+#include "QtAV/private/FilterManager.h"
+
+/*
+ * 1. parent == target (QObject):
+ * in ~target(), remove the filter but not delete it (parent not null now).
+ * in ~QObject, filter is deleted as a child
+ *-----------------------------------------------
+ * 2. parent != target.parent:
+ * if delete filter first, filter must notify FilterManager (uninstall in dtor here) to uninstall to avoid target to access it (in ~target())
+ * if delete target first, target remove the filter but not delete it (parent not null now).
+ */
+namespace QtAV {
+
+void safeReleaseFilter(Filter **ppFilter)
+{
+    if (!ppFilter || !*ppFilter) {
+        qWarning("filter to release is null!");
+        return;
+    }
+    FilterManager::instance().releaseFilter(*ppFilter);
+    *ppFilter = 0;
+}
+
+Filter::Filter(QObject *parent)
+    : QObject(parent)
+{
+    if (parent)
+        setOwnedByTarget(false);
+}
+
+Filter::Filter(FilterPrivate &d, QObject *parent)
+    : QObject(parent)
+    , DPTR_INIT(&d)
+{
+    if (parent)
+        setOwnedByTarget(false);
+}
+
+Filter::~Filter()
+{
+    uninstall();
+}
+
+//copy qpainter if context nut null
+void Filter::process(FilterContext *&context, Statistics *statistics, Frame* frame)
+{
+    if (contextType() == FilterContext::None) {
+        process(statistics, frame);
+        return;
+    }
+    DPTR_D(Filter);
+    if (!d.context) {
+        d.context = FilterContext::create(contextType());
+        d.context->video_width = statistics->video_only.width;
+        d.context->video_height = statistics->video_only.height;
+    }
+    // TODO: reduce mem allocation
+    if (!context || context->type() != contextType()) {
+        if (context) {
+            delete context;
+        }
+        context = FilterContext::create(contextType());
+        context->video_width = statistics->video_only.width;
+        context->video_height = statistics->video_only.height;
+    }
+    // share common data
+    d.context->shareFrom(context);
+    d.context->initializeOnFrame(frame);
+    context->shareFrom(d.context);
+    d.statistics = statistics;
+    process();
+}
+
+void Filter::process()
+{
+}
+
+void Filter::process(Statistics *statistics, Frame *frame)
+{
+    Q_UNUSED(statistics);
+    Q_UNUSED(frame);
+}
+
+void Filter::setEnabled(bool enabled)
+{
+    DPTR_D(Filter);
+    if (d.enabled == enabled)
+        return;
+    d.enabled = enabled;
+    emit enableChanged(enabled);
+}
+
+bool Filter::isEnabled() const
+{
+    DPTR_D(const Filter);
+    return d.enabled;
+}
+
+FilterContext* Filter::context()
+{
+    DPTR_D(Filter);
+    if (!d.context) {
+        d.context = FilterContext::create(contextType());
+    }
+    return d.context;
+}
+
+FilterContext::Type Filter::contextType() const
+{
+    return FilterContext::None;
+}
+
+void Filter::setOwnedByTarget(bool value)
+{
+    d_func().owned_by_target = value;
+}
+
+bool Filter::isOwnedByTarget() const
+{
+    return d_func().owned_by_target;
+}
+
+/*TODO: move to AVOutput.cpp to reduce dependency?*/
+bool Filter::installTo(AVOutput *output)
+{
+    return output->installFilter(this);
+}
+
+/*TODO: move to AVPlayer.cpp to reduce dependency?*/
+bool Filter::installToAudioThread(AVPlayer *player)
+{
+    return player->installAudioFilter(this);
+}
+
+bool Filter::installToVideoThread(AVPlayer *player)
+{
+    return player->installVideoFilter(this);
+}
+
+bool Filter::uninstall()
+{
+    return FilterManager::instance().uninstallFilter(this);
+}
+
+} //namespace QtAV

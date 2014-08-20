@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ao", "E:/QtAV-master/tests/ao\ao.vcxproj", "{A3ED9BC4-6120-303B-8218-0F6631EF33F6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "decoder", "E:/QtAV-master/tests/decoder\decoder.vcxproj", "{AF91F55E-D949-3DFD-8790-E7AAFA1E1FA3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "qiodevice", "E:/QtAV-master/tests/qiodevice\qiodevice.vcxproj", "{776F293A-DFBB-3535-9F5E-0967EC5943ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playerthread", "E:/QtAV-master/tests/playerthread\playerthread.vcxproj", "{886369C7-8090-3F05-8DA4-77AD35F01769}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug|Win32
+		ConfigName.1 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A3ED9BC4-6120-303B-8218-0F6631EF33F6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A3ED9BC4-6120-303B-8218-0F6631EF33F6}.Debug|Win32.Build.0 = Debug|Win32
+		{A3ED9BC4-6120-303B-8218-0F6631EF33F6}.Release|Win32.ActiveCfg = Release|Win32
+		{A3ED9BC4-6120-303B-8218-0F6631EF33F6}.Release|Win32.Build.0 = Release|Win32
+		{AF91F55E-D949-3DFD-8790-E7AAFA1E1FA3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AF91F55E-D949-3DFD-8790-E7AAFA1E1FA3}.Debug|Win32.Build.0 = Debug|Win32
+		{AF91F55E-D949-3DFD-8790-E7AAFA1E1FA3}.Release|Win32.ActiveCfg = Release|Win32
+		{AF91F55E-D949-3DFD-8790-E7AAFA1E1FA3}.Release|Win32.Build.0 = Release|Win32
+		{776F293A-DFBB-3535-9F5E-0967EC5943ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{776F293A-DFBB-3535-9F5E-0967EC5943ED}.Debug|Win32.Build.0 = Debug|Win32
+		{776F293A-DFBB-3535-9F5E-0967EC5943ED}.Release|Win32.ActiveCfg = Release|Win32
+		{776F293A-DFBB-3535-9F5E-0967EC5943ED}.Release|Win32.Build.0 = Release|Win32
+		{886369C7-8090-3F05-8DA4-77AD35F01769}.Debug|Win32.ActiveCfg = Debug|Win32
+		{886369C7-8090-3F05-8DA4-77AD35F01769}.Debug|Win32.Build.0 = Debug|Win32
+		{886369C7-8090-3F05-8DA4-77AD35F01769}.Release|Win32.ActiveCfg = Release|Win32
+		{886369C7-8090-3F05-8DA4-77AD35F01769}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

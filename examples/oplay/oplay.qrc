@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/APlayer">
+        <file>Resources/left.bmp</file>
+        <file>Resources/right.bmp</file>
+        <file>Resources/background.png</file>
+        <file>Resources/background-picture.PNG</file>
+        <file>Resources/button.png</file>
+        <file>Resources/button-pressed.png</file>
+        <file>Resources/hint.png</file>
+        <file>Resources/mute.png</file>
+        <file>Resources/next.png</file>
+        <file>Resources/nextLabel.png</file>
+        <file>Resources/pause.png</file>
+        <file>Resources/play.png</file>
+        <file>Resources/pre.png</file>
+        <file>Resources/preLabel.png</file>
+        <file>Resources/stop.png</file>
+        <file>Resources/unMute.png</file>
+        <file>Resources/branch-closed.png</file>
+        <file>Resources/branch-end.png</file>
+        <file>Resources/branch-more.png</file>
+        <file>Resources/branch-open.png</file>
+        <file>Resources/vline.png</file>
+        <file>Resources/qss/style.qss</file>
+        <file>Resources/down_arrow.png</file>
+        <file>Resources/up_arrow.png</file>
+        <file>Resources/background-picture.png</file>
+        <file>Resources/full.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BackgroundWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BottonDockWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DramaLabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTPFileLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="oplaye.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="playlisttreeview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.moc\4.8.5\oplay\moc_BackgroundWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.moc\4.8.5\oplay\moc_BottonDockWidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.moc\4.8.5\oplay\moc_DramaLabel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.moc\4.8.5\oplay\moc_HTTPFileLoader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.moc\4.8.5\oplay\moc_oplaye.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\.moc\4.8.5\oplay\moc_playlisttreeview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_oplay.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="BackgroundWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="BaseHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="BottonDockWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="DramaLabel.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="HTTPFileLoader.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <ClInclude Include="PlayList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <CustomBuild Include="oplaye.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="playlisttreeview.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-picture.PNG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\background-picture.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\background.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\branch-closed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\branch-end.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\branch-more.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\branch-open.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button-pressed.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\button.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\down_arrow.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\full.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\hint.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\left.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\mute.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\next.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\nextLabel.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <CustomBuild Include="oplay.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <None Include="Resources\pause.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\play.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\pre.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\preLabel.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\right.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\stop.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\qss\style.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\unMute.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\up_arrow.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\vline.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Resources\background-picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ico.rc" />
+  </ItemGroup>
+</Project>
