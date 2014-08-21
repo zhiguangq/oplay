@@ -56,7 +56,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>"$(QTDIR)\include\QtCore";"$(QTDIR)\include\QtGui";"$(QTDIR)\include\QtOpenGL";"$(QTDIR)\include";"$(QTDIR)\include";"f:\3rd-party\FFmpeg-2.0.1_mingw32+msvc\include";"f:\3rd-party\portaudio-v19_msvc2010x86\include";".";"e:\QtAV-master";"QtAV";"compat\msvc";"cuda";"cuda\dllapi";"$(QTDIR)\include\ActiveQt";"..\.moc\4.8.5\QtAVd";$(QTDIR)\mkspecs\default;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include;f:\3rd-party\FFmpeg-2.0.1_mingw32+msvc\include;f:\3rd-party\portaudio-v19_msvc2010x86\include;.;e:\QtAV-master;QtAV;compat\msvc;cuda;cuda\dllapi;$(QTDIR)\include\ActiveQt;..\.moc\4.8.5\QtAVd;$(QTDIR)\mkspecs\default;..\.moc\4.8.5\QtAV;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>..\.obj\QtAVd_win_\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -518,24 +518,6 @@ copy  "$(TargetPath)" "..\bin"</Command>
     <ClInclude Include="QtAV\prepost.h" />
     <ClInclude Include="QtAV\private\singleton.h" />
     <ClInclude Include="QtAV\version.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="e:\QtAV-master\.moc\4.8.5\QtAVd\VideoDecoderCUDA.moc">
-      <FileType>Document</FileType>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;VideoDecoderCUDA.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -DQTAV_HAVE_SSE2=1 -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_AVRESAMPLE=1 -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_PORTAUDIO=1 -DQTAV_HAVE_GL=1 -DQTAV_HAVE_CUDA=1 -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"$(QTDIR)\include\QtCore" -I"$(QTDIR)\include\QtGui" -I"$(QTDIR)\include\QtOpenGL" -I"$(QTDIR)\include" -I"$(QTDIR)\include" -I"f:\3rd-party\FFmpeg-2.0.1_mingw32+msvc\include" -I"f:\3rd-party\portaudio-v19_msvc2010x86\include" -I"." -I"e:\QtAV-master" -I"QtAV" -I"compat\msvc" -I"cuda" -I"cuda\dllapi" -I"$(QTDIR)\include\ActiveQt" -I"..\.moc\4.8.5\QtAVd" -I$(QTDIR)\mkspecs\default -D_MSC_VER=1600 -DWIN32 VideoDecoderCUDA.cpp -o e:\QtAV-master\.moc\4.8.5\QtAVd\VideoDecoderCUDA.moc</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC VideoDecoderCUDA.cpp</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">e:\QtAV-master\.moc\4.8.5\QtAVd\VideoDecoderCUDA.moc;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </CustomBuild>
-    <CustomBuild Include="e:\QtAV-master\.moc\4.8.5\QtAVd\VideoDecoderFFmpeg.moc">
-      <FileType>Document</FileType>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;VideoDecoderFFmpeg.cpp;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -D_CRT_SECURE_NO_WARNINGS -DBUILD_QTAV_LIB -DQTAV_HAVE_SSE2=1 -D__STDC_CONSTANT_MACROS -DQTAV_HAVE_AVRESAMPLE=1 -DQTAV_HAVE_DSOUND=1 -DQTAV_HAVE_PORTAUDIO=1 -DQTAV_HAVE_GL=1 -DQTAV_HAVE_CUDA=1 -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQT_THREAD_SUPPORT -I"$(QTDIR)\include\QtCore" -I"$(QTDIR)\include\QtGui" -I"$(QTDIR)\include\QtOpenGL" -I"$(QTDIR)\include" -I"$(QTDIR)\include" -I"f:\3rd-party\FFmpeg-2.0.1_mingw32+msvc\include" -I"f:\3rd-party\portaudio-v19_msvc2010x86\include" -I"." -I"e:\QtAV-master" -I"QtAV" -I"compat\msvc" -I"cuda" -I"cuda\dllapi" -I"$(QTDIR)\include\ActiveQt" -I"..\.moc\4.8.5\QtAVd" -I$(QTDIR)\mkspecs\default -D_MSC_VER=1600 -DWIN32 VideoDecoderFFmpeg.cpp -o e:\QtAV-master\.moc\4.8.5\QtAVd\VideoDecoderFFmpeg.moc</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MOC VideoDecoderFFmpeg.cpp</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">e:\QtAV-master\.moc\4.8.5\QtAVd\VideoDecoderFFmpeg.moc;%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\.moc\4.8.5\QtAV\VideoDecoderCUDA.moc">

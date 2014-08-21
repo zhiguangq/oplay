@@ -10,6 +10,7 @@ TestResults
 *.pbxuser
 *.perspectivev3
 .DS_Store
+GeneratedFiles
 
 *.old
 *.log
@@ -28,6 +29,7 @@ Makefile*
 *.exp
 *.exe
 *.out
+index.dat
 
 #vc files
 *.def
@@ -42,6 +44,9 @@ Makefile*
 *.user
 *.tlh
 *.tli
+*.sdf
+*.opensdf
+/ipch*
 
 
 #intel compiler

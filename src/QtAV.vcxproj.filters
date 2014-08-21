@@ -534,14 +534,6 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="e:\QtAV-master\.moc\4.8.5\QtAVd\VideoDecoderCUDA.moc">
-      <Filter>Generated Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="e:\QtAV-master\.moc\4.8.5\QtAVd\VideoDecoderFFmpeg.moc">
-      <Filter>Generated Files</Filter>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="e:\QtAV-master\i18n\QtAV_zh_CN.ts">
       <Filter>Translation Files</Filter>
     </None>
