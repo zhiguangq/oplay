@@ -140,7 +140,8 @@ void APlayer::onPositionChange(qint64 pos)
 void APlayer::intervalTimerExpired()
 {
 	// 如果没有播放的视频了，就显示背景
-	if(m_player->mediaStatus() == QtAV::MediaStatus::EndOfMedia)
+	if(m_player->mediaStatus() == QtAV::MediaStatus::EndOfMedia ||
+		m_player->mediaStatus() == QtAV::MediaStatus::InvalidMedia)
 	{
 		m_stackedWidget->setCurrentIndex(1);
 	}
