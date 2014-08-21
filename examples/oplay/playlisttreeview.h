@@ -54,6 +54,7 @@ public slots:
     void onPlaylistLoad(PlayList* list, int PlayIndex);
     void onNextUrl(void);
     void onPreviousUrl(void);
+	void onBackgroundPictureClick(int index);
 protected:
     void mouseDoubleClickEvent(QMouseEvent *event);
 private:

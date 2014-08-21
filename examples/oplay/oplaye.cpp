@@ -22,6 +22,7 @@ APlayer::APlayer(BackgroundWidget* back, QWidget *parent, Qt::WFlags flags)
     m_playList = new PlaylistTreeView();
 
     connect(m_playList,SIGNAL(onPlay(QString)),this,SLOT(onPlay(QString)));
+	connect(m_backgroundWidget, SIGNAL(onBackgroundPictureClick(int)), m_playList, SLOT(onBackgroundPictureClick(int)));
 
     connect(m_backgroundWidget, SIGNAL(onPlaylistLoad(PlayList*, int)), \
             this->m_playList, SLOT(onPlaylistLoad(PlayList*, int)));

@@ -23,6 +23,7 @@ public:
 
 Q_SIGNALS:
     void onPlaylistLoad(PlayList* list, int PlayIndex);
+	void onBackgroundPictureClick(int index);
 private slots:
     void httpReadyRead(void);
     void httpFinished(void);

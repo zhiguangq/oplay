@@ -139,6 +139,17 @@ void PlaylistTreeView::onPreviousUrl(void)
     }
 }
 
+void PlaylistTreeView::onBackgroundPictureClick(int index)
+{
+    ItemInfo ret = getOneMovie(m_model->item(index));
+    m_model->horizontalHeaderItem(0)->setText(ret.m_name);
+
+    qDebug("background click : %s",m_model->item(index)->text().toStdString().c_str());
+    qDebug("background click : %s",m_model->item(index)->data().toString().toStdString().c_str());
+
+	emit onPlay(ret.m_url);
+}
+
 void PlaylistTreeView::mouseDoubleClickEvent(QMouseEvent *event)
 {
     if (event->button() == Qt::LeftButton)

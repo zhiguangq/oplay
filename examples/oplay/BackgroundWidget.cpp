@@ -157,7 +157,10 @@ void BackgroundWidget::getHTTPFile(QString name)
 
 void BackgroundWidget::dramaLabelClick(int index)
 {
-    //emit onProgramClick(m_recommendPlaylist.getNode(index), 1);
+	qDebug("background picture index : %d been click.", index - 35);
+
+	//index = 36 为第一个图片
+	emit onBackgroundPictureClick(index - 35);
 }
 
 BackgroundWidget::~BackgroundWidget(void)
