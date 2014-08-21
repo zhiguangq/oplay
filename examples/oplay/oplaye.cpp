@@ -138,6 +138,12 @@ void APlayer::onPositionChange(qint64 pos)
 
 void APlayer::intervalTimerExpired()
 {
+	// 如果没有播放的视频了，就显示背景
+	if(m_player->mediaStatus() == QtAV::MediaStatus::EndOfMedia)
+	{
+		m_stackedWidget->setCurrentIndex(1);
+	}
+
     // 调整左方和下方两个控件可见
     int currentX = QWidget::mapFromGlobal(QCursor::pos()).rx();
     int currentY = QWidget::mapFromGlobal(QCursor::pos()).ry();
