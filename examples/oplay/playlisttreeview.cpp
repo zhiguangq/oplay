@@ -14,6 +14,8 @@ PlaylistTreeView::PlaylistTreeView(QWidget *parent)
 
     QStandardItem *item = new QStandardItem("oplay");
     m_model->setHorizontalHeaderItem(0, item);
+
+	connect(this,SIGNAL(clicked(const QModelIndex &)),this,SLOT(onItemClicked(const QModelIndex &)));
 }
 
 void PlaylistTreeView::addItem(QString itemName, QString value)
@@ -150,19 +152,16 @@ void PlaylistTreeView::onBackgroundPictureClick(int index)
 	emit onPlay(ret.m_url);
 }
 
-void PlaylistTreeView::mouseDoubleClickEvent(QMouseEvent *event)
+void PlaylistTreeView::onItemClicked(const QModelIndex &index)
 {
-    if (event->button() == Qt::LeftButton)
+    if(index.isValid())
     {
-        QModelIndex index = currentIndex();
-        if(index.isValid())
-        {
-            ItemInfo ret = getOneMovie(m_model->itemFromIndex(index));
-            m_model->horizontalHeaderItem(0)->setText(ret.m_name);
-            emit onPlay(ret.m_url);
-            qDebug("click : %s",m_model->itemFromIndex(index)->text().toStdString().c_str());
-            qDebug("click : %s",m_model->itemFromIndex(index)->data().toString().toStdString().c_str());
-        }
+        ItemInfo ret = getOneMovie(m_model->itemFromIndex(index));
+        m_model->horizontalHeaderItem(0)->setText(ret.m_name);
+        emit onPlay(ret.m_url);
+        qDebug("click : %s",m_model->itemFromIndex(index)->text().toStdString().c_str());
+        qDebug("click : %s",m_model->itemFromIndex(index)->data().toString().toStdString().c_str());
     }
 }
+
 

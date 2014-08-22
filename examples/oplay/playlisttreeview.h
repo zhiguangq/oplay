@@ -55,8 +55,7 @@ public slots:
     void onNextUrl(void);
     void onPreviousUrl(void);
 	void onBackgroundPictureClick(int index);
-protected:
-    void mouseDoubleClickEvent(QMouseEvent *event);
+	void onItemClicked(const QModelIndex &index);
 private:
     QStandardItemModel *m_model;
     QVector<ItemInfo>   m_playListVector;
